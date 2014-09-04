@@ -1,6 +1,6 @@
 {
   "name": "Pack Bookmarks",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "Simple extension that give and option to pack few bookmarks in single (goo.gl) link",
   "permissions": [
     "http://tuna-optimal.codio.io:8080/*", "bookmarks"

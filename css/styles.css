@@ -35,3 +35,20 @@
 .ni_tree ul.has_subtree{
     margin-left: 5px;
 }
+
+.header-cont {
+    width: 100%;
+    position: fixed;
+    top: 5px;
+}
+.header {
+    height: 50px;
+    background: #F0F0F0;
+    border: 0px solid #CCC;
+    margin: 0px auto;
+}
+
+.content {
+    border: 0px solid #CCC;
+    margin: 30px auto;
+}

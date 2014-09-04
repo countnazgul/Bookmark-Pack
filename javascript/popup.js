@@ -1,9 +1,6 @@
-//var treeData = TreeData();
-//console.log(treeData);
-
-var treeData;
 chrome.bookmarks.getTree(function(bookmarkTreeNodes) {
-    str = bookmarkTreeNodes;
+    str = bookmarkTreeNodes[0];
+    str = str.children;
     str = JSON.stringify(str);
     str = str.replace(/"title":/g, '"label":');
     treeData = JSON.parse(str);
@@ -11,12 +8,18 @@ chrome.bookmarks.getTree(function(bookmarkTreeNodes) {
     tree = $('#tree').niTree({treeData: treeData}),
     $log = $('#log');
     tree.niTree('collapseAll');
+
 });
 
 $('#btn_checked_leafs').on('click', function(){
-    $log.prepend('[' + tree.niTree('get', {selected: true, leafsOnly: true, attributeToSelect: 'url'}).join(', ') + ']\n');
-    toPost =tree.niTree('get', {selected: true, leafsOnly: true, attributeToSelect: 'url'}).join(', ');
-    SendData(toPost);
+    toPost = tree.niTree('get', {selected: true, leafsOnly: true, attributeToSelect: 'url'}).join(', ');
+    if( toPost.length > 0) {
+      $log.prepend('[' + tree.niTree('get', {selected: true, leafsOnly: true, attributeToSelect: 'url'}).join(', ') + ']\n');
+      SendData(toPost);
+    } else {
+      $('#response').text('');
+      $('#response').text('No  selections :(');
+    }
 });
 
 
@@ -28,12 +31,13 @@ function SendData(toPost) {
     if (xhr.readyState == 4) {
       response = JSON.parse(xhr.responseText);
       if(response.error) {
+        $('#response').text('');
         $('#response').text(response.error);
       } else {
+        $('#response').text('');
         $('#response').append('<a href='+ response.url +'  target="_blank">'+response.url+'</a>');
       }
     }
   }
   xhr.send('data=' + toPost);
 }
-
