@@ -37,13 +37,16 @@
 }
 
 .header-cont {
+    background: #C0C0C0;
+    height: 26px;
     width: 100%;
     position: fixed;
-    top: 5px;
+    top: 0px;
+    left: 0px;
 }
 .header {
     height: 50px;
-    background: #F0F0F0;
+    background: #F0F0F9;
     border: 0px solid #CCC;
     margin: 0px auto;
 }
@@ -51,4 +54,10 @@
 .content {
     border: 0px solid #CCC;
     margin: 30px auto;
+}
+
+.button {
+    margin-top:2px; 
+    margin-left:2px; 
+}
 }
