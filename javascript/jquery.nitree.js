@@ -15,6 +15,12 @@
                     if(child.id){
                         child.attributes.id = child.id;
                     }
+                    if(child.label){
+                        child.attributes.label = child.label;
+                    }
+                    if(child.url){
+                        child.attributes.url = child.url; 
+                    }
                     var $ul = $('<ul>', root ? {'class': 'ni_tree'} : {}),
                         $li = $('<li>', child.attributes),
                         $label = $('<span/>').html(child.label);

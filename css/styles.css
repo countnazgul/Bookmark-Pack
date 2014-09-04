@@ -20,7 +20,7 @@
     background-size: contain;
 }
 .ni_tree li.ni_tree_close>.ni_tree_ctrl{
-    background-image: url('../images/icon_collapse.gif');
+    background-image: url('../images/icon_expand.gif');
     background-color: blue;
 }
 

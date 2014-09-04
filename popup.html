@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="styles.css">
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/jquery.nitree.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body style="width: 400px">
-  <div id="bookmarks"></div>
-  <div id="editdialog"></div>
-  <div id="deletedialog"></div>
-  <div id="adddialog"></div>
-<div id="currentTabUrl"></div>
-  <div id="main">
-    <div id="scrollable-dropdown-menu">
-      <input class="typeahead" type="text" placeholder="Projects"> <span>+Create group</span>
-    </div>
     
-  </div>
-  <div>
-    <div id="links"></div>
-    <button id="send">Send</button>
-  </div>
+    <div id=tree></div>
+    <input id=btn_checked_leafs type=button value="Send selected"> <div id='response'> </div>
 
-  <script src="jquery.min.js"></script>
-  <script src="typeahead.bundle.js"></script>
-  <script src="popup.js"></script>
+  <script src="/javascript/popup.js"></script>
 </body>
 </html>
