@@ -1,14 +1,19 @@
 {
-  "name": "Pack Bookmarks",
-  "version": "1.1.3",
-  "description": "Simple extension that give and option to pack few bookmarks in single (goo.gl) link",
-  "permissions": [
-    "http://tuna-optimal.codio.io:8080/*", "bookmarks"
-  ],
-  "browser_action": {
-      "default_title": "Pack Bookmarks",
-      "default_icon": "/images/icon.png",
-      "default_popup": "popup.html"
-  },
-  "manifest_version": 2
+   "browser_action": {
+      "default_icon": "/images/16.png",
+      "default_popup": "popup.html",
+      "default_title": "Pack Bookmarks"
+   },
+   "description": "Simple extension that give you option to pack few bookmarks in single (goo.gl) link",
+   "icons": {
+      "128": "images/icons/128.png",
+      "16": "images/icons/16.png",
+      "48": "images/icons/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkPU6XmjKGhigXrkcaVZUqktg3eBG0Pmnd5PsNy4QAUqSpkHqsbzFhJjuBFK3Gk1om0oUsz7/B9zvirVVQoZmBLO6kPejIeNc1pFQmkBiRd6PAZjzFSqxXHV4rdzkseJkRZ+xmXZ1ZcqNpQJsaM8gB7iakZ3R4lfceyaF7xpvS5iyNmWB8JQXlePiV5Hq5s8Goo0BGCesRc3YJvY2tdTHJrxZpFb9eJL4RrsHeQ/xFh9VgAhQdKHs0Y9Jz+IxwfVxSJYLo014sSanIeZy9GO/VQ+XtwVitiXWYlgowWKXFgSXXoG/x2ubtCILRv0JzgtbPFEew2f3eyOGh132muiYmwIDAQAB",
+   "manifest_version": 2,
+   "name": "Pack Bookmarks",
+   "permissions": [ "http://tuna-optimal.codio.io:8080/*", "bookmarks" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.1.5"
 }

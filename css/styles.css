@@ -1,10 +1,12 @@
 .ni_tree, .ni_tree ul{
     list-style-type: none;
     margin-top: 5px;
-    padding-left: 30px;
+    padding-left: 3px;
+    font-family: Tahoma;
+    font-size: 10px;
 }
 .ni_tree .ni_tree_no_checkbox{
-    margin-left: 18px;
+    margin-left: 10px;
 }
 .ni_tree .ni_tree_checkbox{
     margin-right: 5px;
@@ -43,6 +45,8 @@
     position: fixed;
     top: 0px;
     left: 0px;
+    font-family: Tahoma;
+    font-size: 10px;    
 }
 .header {
     height: 50px;
@@ -54,10 +58,14 @@
 .content {
     border: 0px solid #CCC;
     margin: 30px auto;
+    font-family: Tahoma;
+    font-size: 12px;    
 }
 
 .button {
     margin-top:2px; 
-    margin-left:2px; 
+    margin-left:2px;
+    font-family: Tahoma;
+    font-size: 12px;    
 }
 }
