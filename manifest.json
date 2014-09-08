@@ -13,7 +13,7 @@
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkPU6XmjKGhigXrkcaVZUqktg3eBG0Pmnd5PsNy4QAUqSpkHqsbzFhJjuBFK3Gk1om0oUsz7/B9zvirVVQoZmBLO6kPejIeNc1pFQmkBiRd6PAZjzFSqxXHV4rdzkseJkRZ+xmXZ1ZcqNpQJsaM8gB7iakZ3R4lfceyaF7xpvS5iyNmWB8JQXlePiV5Hq5s8Goo0BGCesRc3YJvY2tdTHJrxZpFb9eJL4RrsHeQ/xFh9VgAhQdKHs0Y9Jz+IxwfVxSJYLo014sSanIeZy9GO/VQ+XtwVitiXWYlgowWKXFgSXXoG/x2ubtCILRv0JzgtbPFEew2f3eyOGh132muiYmwIDAQAB",
    "manifest_version": 2,
    "name": "Pack Bookmarks",
-   "permissions": [ "http://tuna-optimal.codio.io:8080/*", "bookmarks" ],
+   "permissions": [ "http://146.185.148.8/*", "bookmarks" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "1.1.5"
 }
