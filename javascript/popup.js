@@ -25,7 +25,7 @@ $('#btn_checked_leafs').on('click', function(){
 
 function SendData(toPost) {
   xhr = new XMLHttpRequest();
-  xhr.open("POST", "http://tuna-optimal.codio.io:8080/new");
+  xhr.open("POST", "http://146.185.148.8/new");
   xhr.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded" );
   xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
