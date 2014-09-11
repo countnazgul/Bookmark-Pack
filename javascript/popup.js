@@ -1,3 +1,5 @@
+var background_page = chrome.extension.getBackgroundPage();
+
 chrome.bookmarks.getTree(function(bookmarkTreeNodes) {
     str = bookmarkTreeNodes[0];
     str = str.children;
@@ -35,7 +37,10 @@ function SendData(toPost) {
         $('#response').text(response.error);
       } else {
         $('#response').text('');
-        $('#response').append('<a href='+ response.url +'  target="_blank">'+response.url+'</a>');
+        $('#response').append('<a id="shortlink" href='+ response.url +'  target="_blank">'+response.url+'</a>');
+        if(document.getElementById("copy").checked) {
+          background_page.copyToClipboard(response.url);
+        }
       }
     }
   }
