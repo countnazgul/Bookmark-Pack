@@ -3,8 +3,12 @@
   <head>
       <script src="javascript/jquery.min.js"></script>
       <script src="javascript/jquery.nitree.js"></script>
+      <script src="javascript/ion.tabs.min.js"></script>      
       <link rel="stylesheet" href="css/styles.css">
       <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/ion.tabs.css">
+      <link rel="stylesheet" href="css/ion.tabs.skinBordered.css">
+
   </head>
   <body style="width: 400px">
     
@@ -17,7 +21,21 @@
     </div>
     
     <div class="content">
-      <div id=tree></div>
+<div class="ionTabs" id="tabs_1" data-name="Tabs_Group_name">
+    <ul class="ionTabs__head">
+        <li class="ionTabs__tab" data-target="Bookmarks">Bookmarks</li>
+        <li class="ionTabs__tab" data-target="Open_tabs">Open tabs</li>
+    </ul>
+    <div class="ionTabs__body">
+        <div class="ionTabs__item" data-name="Bookmarks">
+             <div id=tree></div>
+        </div>
+        <div class="ionTabs__item" data-name="Open_tabs">
+            <div id="tabs" class="tabs"></div>
+        </div>
+        <div class="ionTabs__preloader"></div>
+    </div>
+</div>    
     </div>
   
     <script src="/javascript/popup.js"></script>

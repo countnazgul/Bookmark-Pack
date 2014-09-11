@@ -13,7 +13,21 @@ chrome.bookmarks.getTree(function(bookmarkTreeNodes) {
 
 });
 
+chrome.tabs.query({}, function(tabs) {
+  tabs.forEach(function(tab){
+      chrome.tabs.get(tab.id, function(details){
+        if(details.title.length >= 55) {
+          title = details.title.substring(0,55) + ' ...';
+        } else {
+          title = details.title;
+        }
+        $('#tabs').append('<input type="checkbox" id="copy" name="copy" class="opentabs" value="' + details.url +'">' + title + '<br/>');
+      })
+    });
+});
+
 $('#btn_checked_leafs').on('click', function(){
+  if(activeTab === 'Bookmarks') {
     toPost = tree.niTree('get', {selected: true, leafsOnly: true, attributeToSelect: 'url'}).join(', ');
     if( toPost.length > 0) {
       $log.prepend(tree.niTree('get', {selected: true, leafsOnly: true, attributeToSelect: 'url'}).join(', '));
@@ -21,9 +35,27 @@ $('#btn_checked_leafs').on('click', function(){
     } else {
       $('#response').text('');
       $('#response').text('No  selections :(');
+    } 
+  } else {
+    var checkedValues = $('.opentabs:checked').map(function() {
+      return this.value;
+    }).get();
+    if( checkedValues.length > 0) {
+       SendData(checkedValues.toString());  
+    } else {
+      $('#response').text('');
+      $('#response').text('No  selections :(');
     }
+  }
 });
 
+var activeTab = 'Bookmarks';
+
+$.ionTabs("#tabs_1", {
+      onChange: function(obj){
+        activeTab = obj.tab;
+    }
+});
 
 function SendData(toPost) {
   xhr = new XMLHttpRequest();
