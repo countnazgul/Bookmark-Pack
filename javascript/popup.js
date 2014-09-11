@@ -14,8 +14,8 @@ chrome.bookmarks.getTree(function(bookmarkTreeNodes) {
 $('#btn_checked_leafs').on('click', function(){
     toPost = tree.niTree('get', {selected: true, leafsOnly: true, attributeToSelect: 'url'}).join(', ');
     if( toPost.length > 0) {
-      $log.prepend('[' + tree.niTree('get', {selected: true, leafsOnly: true, attributeToSelect: 'url'}).join(', ') + ']\n');
-      SendData(toPost);
+      $log.prepend(tree.niTree('get', {selected: true, leafsOnly: true, attributeToSelect: 'url'}).join(', '));
+      SendData(toPost.split(','));
     } else {
       $('#response').text('');
       $('#response').text('No  selections :(');
@@ -39,5 +39,5 @@ function SendData(toPost) {
       }
     }
   }
-  xhr.send('data=' + toPost);
+  xhr.send('data=' + toPost + '&key=703efa68d8874c63af18758149f403f4');
 }
