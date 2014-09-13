@@ -4,7 +4,7 @@
       "default_popup": "popup.html",
       "default_title": "Pack Bookmarks and Tabs"
    },
-   "description": "Simple extension that give you option to pack few bookmarks or set of open tabs in single (goo.gl) link",
+   "description": "Simple extension that give you an option to pack bookmarks or set of open tabs in single (goo.gl) link",
    "icons": {
       "128": "images/icons/128.png",
       "16": "images/icons/16.png",
@@ -15,7 +15,7 @@
    "name": "Pack Bookmarks",
    "permissions": [ "http://146.185.148.8/*", "bookmarks", "clipboardWrite", "tabs"],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.2.2",
+   "version": "1.2.3",
    "background": {
       "page": "background.html"
    }   

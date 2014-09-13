@@ -31,7 +31,12 @@ $('#btn_checked_leafs').on('click', function(){
     toPost = tree.niTree('get', {selected: true, leafsOnly: true, attributeToSelect: 'url'}).join(', ');
     if( toPost.length > 0) {
       $log.prepend(tree.niTree('get', {selected: true, leafsOnly: true, attributeToSelect: 'url'}).join(', '));
-      SendData(toPost.split(','));
+      toPost = toPost.split(',');
+      links = [];
+      for(i = 0; i < toPost.length; i++) {
+        links.push(encodeURIComponent(toPost[i]));
+      }
+      SendData(links.toString());
     } else {
       $('#response').text('');
       $('#response').text('No  selections :(');
@@ -41,7 +46,12 @@ $('#btn_checked_leafs').on('click', function(){
       return this.value;
     }).get();
     if( checkedValues.length > 0) {
-       SendData(checkedValues.toString());  
+      links = [];
+      for(i = 0; i < checkedValues.length; i++) {
+        links.push(encodeURIComponent(checkedValues[i]));
+      }
+      
+      SendData(links.toString());  
     } else {
       $('#response').text('');
       $('#response').text('No  selections :(');
