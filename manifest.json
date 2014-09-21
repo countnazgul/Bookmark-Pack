@@ -15,7 +15,7 @@
    "name": "Pack Bookmarks",
    "permissions": [ "http://146.185.148.8/*", "bookmarks", "clipboardWrite", "tabs"],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.2.3",
+   "version": "1.2.4",
    "background": {
       "page": "background.html"
    }   

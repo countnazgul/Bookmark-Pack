@@ -51,12 +51,19 @@ $('#btn_checked_leafs').on('click', function(){
         links.push(encodeURIComponent(checkedValues[i]));
       }
       
-      SendData(links.toString());  
+      SendData(links.toString(), 0);  
     } else {
       $('#response').text('');
       $('#response').text('No  selections :(');
     }
   }
+});
+
+$('#btn_short_current').on('click', function(){
+  chrome.tabs.getSelected(null, function(tab){
+    console.log(tab.url);
+    SendData(tab.url, 1);
+  });
 });
 
 var activeTab = 'Bookmarks';
@@ -67,7 +74,7 @@ $.ionTabs("#tabs_1", {
     }
 });
 
-function SendData(toPost) {
+function SendData(toPost, raw) {
   xhr = new XMLHttpRequest();
   xhr.open("POST", "http://146.185.148.8/new");
   xhr.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded" );
@@ -86,5 +93,5 @@ function SendData(toPost) {
       }
     }
   }
-  xhr.send('data=' + toPost + '&key=703efa68d8874c63af18758149f403f4');
+  xhr.send('data=' + toPost + '&key=703efa68d8874c63af18758149f403f4&raw='+raw);
 }
